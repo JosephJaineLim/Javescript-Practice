@@ -11,14 +11,13 @@ getDays(new Date("December 29, 2018"),new Date("January 1, 2019")) ➞ 3
 
 
 getDays(new Date("July 20, 2019"),new Date("July 30, 2019")) ➞ 10
-
 */
 
 
 const getDays = (arr1, arr2) => {
-    let days = Math.abs(arr1 - arr2); // returns positive millisecs;
+    let days = Math.abs(arr1 - arr2); // declare days in positive millisecs;
     
-    return days / 1000 / 60 / 60 / 24; 
+    return days / 1000 / 60 / 60 / 24; // 1000 ms  = secs -> 60 secs = min -> 60 mins = hour -> 24hours = day 
 
 }
 
