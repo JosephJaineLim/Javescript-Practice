@@ -25,12 +25,14 @@ countBoomerangs([5, 6, 6, 7, 6, 3, 9]) ➞ 1
 countBoomerangs([4, 4, 4, 9, 9, 9, 9]) ➞ 0
 
 */
+
+
 const countBoomerangs = (arr) =>{
     let boomerang = 0;
     arr.forEach((x,y) => {
         if(arr[y-1] === arr[y+1] && x !== arr[y+1])
         {
-            boomerang++
+            boomerang++;
         }
     })
 
