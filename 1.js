@@ -20,14 +20,12 @@ sevenBoom([2, 55, 60, 97, 86]) ➞ "Boom!"
 
 const sevenBoom = (arr) => {
     let t = []
-    arr.forEach(el => {
-        t.push(el.toString().split(""));
-    })
-
+    arr.forEach(el => t.push(el.toString().split("")))
     return t.flat().indexOf('7') > 0 ? "Boom" : "There's no 7 in the Array";
 }
 
 
-console.log(sevenBoom([1, 2, 3, 4, 5, 6, 7])); // Boom
+console.log(sevenBoom([1, 2, 3, 4, 5, 6, 7])); // Boom 
 console.log(sevenBoom([8, 6, 33, 100])); // No 7 
-console.log(sevenBoom([2, 55, 60, 97, 86])); // Boom
+console.log(sevenBoom([2, 55, 60, 97, 86])); // Boom 
+
