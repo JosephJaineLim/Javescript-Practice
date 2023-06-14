@@ -17,10 +17,9 @@ sevenBoom([2, 55, 60, 97, 86]) ➞ "Boom!"
 */
 
 
-
 const sevenBoom = (arr) => {
-    let t = []
-    arr.forEach(el => t.push(el.toString().split("")))
+    let t = [];
+    arr.forEach(el => t.push(el.toString().split("")));
     return t.flat().indexOf('7') > 0 ? "Boom" : "There's no 7 in the Array";
 }
 
