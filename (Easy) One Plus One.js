@@ -19,14 +19,13 @@ NOTES:
 */
 
 const wordedMath = (arr) => {
-    let t = []
+    let t = [];
     const num = ["zero","one","two"];
-    const ope = ["plus", "minus"]
-    let ans = 0;
+    const ope = ["plus", "minus"];
 
-    t = arr.split(" ").map(el => num.indexOf(el.toLowerCase()) >= 0 ? num.indexOf(el.toLowerCase()) : ope.indexOf(el.toLowerCase()) === 0 ? "+" : ope.indexOf(el.toLowerCase()) === 1 ? "-" : el)
+    t = arr.split(" ").map(el => num.indexOf(el.toLowerCase()) >= 0 ? num.indexOf(el.toLowerCase()) : ope.indexOf(el.toLowerCase()) === 0 ? "+" : ope.indexOf(el.toLowerCase()) === 1 ? "-" : el);
     
-    return num[eval(t.join(" "))].replace(/^./, str => str.toUpperCase())
+    return num[eval(t.join(" "))].replace(/^./, str => str.toUpperCase());
 }
 
 console.log(wordedMath("One plus one")) // "Two"
