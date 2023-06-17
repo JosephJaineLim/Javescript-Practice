@@ -29,21 +29,12 @@ NOTES:
 
 const arithmeticOperation = (arr) => {
     let  t = [];
+    let ans;
+
     t = arr.split(" ").map(el => Number.isInteger(Number(el)) ? Number(el) : el)
+    ans = eval(t.join(" "));
 
-    switch(t[1])
-    {
-        case "+": 
-            return t[0] + t[2];
-        case "-":
-            return t[0] - t[2];
-        case "*":
-            return t[0] * t[2];
-        case "/":
-            if(t[2] == 0) return -1;
-            return t[0] / t[2];
-    }
-
+    return  ans !== Infinity ? ans : -1 ;
 }
 
 console.log(arithmeticOperation("12 + 12")) // 24

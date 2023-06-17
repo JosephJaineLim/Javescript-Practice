@@ -21,21 +21,12 @@ NOTES:
 const wordedMath = (arr) => {
     let t = []
     const num = ["zero","one","two"];
+    const ope = ["plus", "minus"]
     let ans = 0;
 
-    t = arr.split(" ").map(el => num.indexOf(el.toLowerCase()) >= 0 ? num.indexOf(el.toLowerCase()) : el)
-
-    switch(t[1].toLowerCase())
-    {
-        case "plus": 
-            ans = t[0] + t[2];
-            break;
-        case "minus":
-            ans = t[0] - t[2];
-            break;
-    }
-
-    return num[ans].replace(/^./, str => str.toUpperCase())
+    t = arr.split(" ").map(el => num.indexOf(el.toLowerCase()) >= 0 ? num.indexOf(el.toLowerCase()) : ope.indexOf(el.toLowerCase()) === 0 ? "+" : ope.indexOf(el.toLowerCase()) === 1 ? "-" : el)
+    
+    return num[eval(t.join(" "))].replace(/^./, str => str.toUpperCase())
 }
 
 console.log(wordedMath("One plus one")) // "Two"
