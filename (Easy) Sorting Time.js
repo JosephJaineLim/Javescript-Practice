@@ -25,6 +25,7 @@ Notes:
     This is a challenge to enhance your ability, using the sort built-in won't enhance your skills.
 */
 
+// BUBBLE SORT
 const sortArray = (arr) => {
     
     for(let i = 0; i < arr.length; i++)
@@ -47,3 +48,4 @@ const sortArray = (arr) => {
 console.log(sortArray([2, -5, 1, 4, 7, 8])) // [-5, 1, 2, 4, 7, 8]
 console.log(sortArray([23, 15, 34, 17, -28])) // [-28, 15, 17, 23, 34]
 console.log(sortArray([38, 57, 45, 18, 47, 39])) // [18, 38, 39, 45, 47, 57]
+
