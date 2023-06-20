@@ -21,18 +21,13 @@ chosenWine([]) ➞ null
 
 Notes:
 
-    All wines will be different prices, so there is no confusion in the ordering.
+  All wines will be different prices, so there is no confusion in the ordering.
+
 */
 
-const chosenWine = (arr) => {
-
-}
+const chosenWine = (arr) => arr.length === 0 ? null : arr.length === 1 ? arr[0].name : arr.sort((a,b) => a.price - b.price)[1].name 
 
 
-console.log(chosenWine([
-    { name: "Wine A", price: 8.99 },
-    { name: "Wine 32", price: 13.99 },
-    { name: "Wine 9", price: 10.99 }
-  ])) // "Wine 9"
+console.log(chosenWine([{ name: "Wine A", price: 8.99 },{ name: "Wine 32", price: 13.99 },{ name: "Wine 9", price: 10.99 }])) // "Wine 9"
 console.log(chosenWine([{ name: "Wine A", price: 8.99 }])) // "Wine A"
 console.log(chosenWine([])) // null
