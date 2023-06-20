@@ -33,7 +33,11 @@ const primorial = (arr) => {
         {
             prime.push(i);
         }
-        else if(i % 2 > 0 && i % 3 > 0)
+        else if(i === 5)
+        {
+            prime.push(i);
+        }
+        else if(i % 2 > 0 && i % 3 > 0 && i % 5 > 0)
         {
             prime.push(i);
         }
