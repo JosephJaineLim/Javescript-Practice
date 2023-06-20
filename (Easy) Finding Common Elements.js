@@ -29,7 +29,6 @@ const commonElements = (a,b) => {
     });
 
     return c;
-
 }
 
 console.log(commonElements([-1, 3, 4, 6, 7, 9], [1, 3])) // [3]
