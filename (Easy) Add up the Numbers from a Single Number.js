@@ -12,10 +12,7 @@ addUp(13) ➞ 91
 addUp(600) ➞ 180300
 */
 
-const addUp = (a) => {
-    if(a === 0) return 0;
-    if(a > 0) return a + addUp(a-1);
-}
+const addUp = (a) => a === 0 ? 0 : a + addUp(a-1)
 
 console.log(addUp(4)) // 10
 console.log(addUp(13)) // 91
