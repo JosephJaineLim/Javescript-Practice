@@ -21,10 +21,17 @@ isEven("-99") ➞ "No"
 // Use Regular Expression
 
 */
-const isOdd = (arr) => arr & 1 ? "Yes" : "No";
-const isEven = (arr) => arr.match(/[02468]$/) ? "Yes" : "No";
+const func = (arr) =>
+{
+    const isOdd = (arr) => arr & 1 ? "Yes" : "No";
+    const isEven = (arr) => arr.match(/[02468]$/) ? "Yes" : "No";
 
-console.log(isOdd(3));  // "Yes"
-console.log(isOdd(58)); // "No"
-console.log(isEven("0")); // "Yes"
-console.log(isEven("-99")); // "No"
+    return {isOdd,isEven};
+}
+
+const bitRegex = func();
+
+console.log(bitRegex.isOdd(3));  // "Yes"
+console.log(bitRegex.isOdd(58)); // "No"
+console.log(bitRegex.isEven("0")); // "Yes"
+console.log(bitRegex.isEven("-99")); // "No"
