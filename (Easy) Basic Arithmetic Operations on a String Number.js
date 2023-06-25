@@ -28,11 +28,9 @@ NOTES:
 */
 
 const arithmeticOperation = (arr) => {
-    let  t = [];
-    let ans;
 
-    t = arr.split(" ").map(el => Number.isInteger(Number(el)) ? Number(el) : el)
-    ans = eval(t.join(" "));
+    let t = arr.split(" ").map(el => Number.isInteger(Number(el)) ? Number(el) : el)
+    let ans = eval(t.join(" "));
 
     return  ans !== Infinity ? ans : -1 ;
 }
