@@ -116,12 +116,12 @@ const validName = (a) => {
     .includes(false)
 }
 
-console.log(validName("H. Wells")); // true
-console.log(validName("H. G. Wells")); // true
-console.log(validName("Herbert G. Wells")); // true
-console.log(validName("Herbert")); // false
-console.log(validName("h. Wells")); // false
-console.log(validName("H Wells")); // false
-console.log(validName("H. George Wells")); // false
-console.log(validName("H. George W.")); // false
+console.log(validName("H. Wells"));           // true
+console.log(validName("H. G. Wells"));        // true
+console.log(validName("Herbert G. Wells"));   // true
+console.log(validName("Herbert"));            // false
+console.log(validName("h. Wells"));           // false
+console.log(validName("H Wells"));            // false
+console.log(validName("H. George Wells"));    // false
+console.log(validName("H. George W."));       // false
 console.log(validName("Herb. George Wells")); // false
