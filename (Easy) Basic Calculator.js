@@ -18,7 +18,7 @@ const calculator = (num1, operator, num2) => {
     
     let ans;
     switch(operator){
-        case '+': ans = num1 + num2;
+        case '': ans = num1 + num2;
         break;
         case '-': ans = num1 - num2;
         break;
